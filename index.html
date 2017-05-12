@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+         produit= {name:String,Code:String,id:String,category:String};
+         category={name:name,listProduits:[]};
+         listCategories=[];
+         categorie1={};
+         categorie1.name="nom";
+         categorie1.listProduits=[];
+
+        function addCategory(){
+            var category=document.getElementById("categorie").value;
+            var option=document.createElement("option");
+            option.text=category;
+            var listCategorys=document.getElementById("categories");
+            listCategorys.add(option);
+            listCategories.push(category);
+        }
+        function addProduct(){
+            var productName=document.getElementById("NomProd").value;
+            var productCode=document.getElementById("CodeProd").value;
+            var productCategory=document.getElementById("categories").value;
+            var row=document.getElementById("myTable").insertRow("-1");
+            var cell1=row.insertCell(-1);
+            var cell2=row.insertCell(0);
+            var cell3=row.insertCell(1);
+            var cell4=row.insertCell(2);
+            cell1.innerHTML=productName;
+            cell2.innerHTML=productCode;
+            cell3.innerHTML=productCategory;
+            cell4.innerHTML=1;
+          //  document.getElementsByTagName("")
+        }
+    </script>
+    <meta charset="UTF-8">
+    <link  rel="stylesheet" href="css/bootstrap.min.css" />
+    <title>Title</title>
+</head>
+<body>
+<div class="container" style="background:#ffbaba">
+    <div class="row">
+        <div class="col-md-12">
+            <form>
+                <input type="text" id="categorie" placeholder="Nom Categorie"/>
+                <input type="button"  value="addCategory" onclick="addCategory()"/>
+                </form>
+        </div>
+        <div class="col-md-6">
+            <table id="myTable" style="border:1px;border-color: black">
+                <th>idProduit</th><th>Nom produit</th><th>code produit</th><th>Category produit</th>
+                <td></td><td></td><td></td><td></td><td></td>
+            </table>
+            </div>
+
+        <div class="col-md-6">
+        <form>
+            <input type="text" id="NomProd" placeholder="Nom produit"/>
+            <input type="text" id="CodeProd" placeholder="Code produit"/>
+            <input type="button"  value="addCategory" onclick="addProduct()"/>
+            <select id="categories">
+</select>
+        </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
