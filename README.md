@@ -1,2 +1,2 @@
-# DataTableNativeJs
-Simple Javascript Data Table wrote in natvanilla ive Javscript
+# data table in vanilla javascript
+dynamic data table in vanilla javascript
